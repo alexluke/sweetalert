@@ -149,6 +149,18 @@
 });</pre>
 	</li>
 
+  <li class="html-in-body">
+    <div class="ui">
+      <p>HTML in the body</p>
+      <button>Try me!</button>
+    </div>
+    <pre>swal({
+&nbsp;&nbsp;title: <span class="str">"Hello"</span>,
+&nbsp;&nbsp;text: <span class="str">&lt;strong&gt;I'm bold!&lt;/strong&gt;</span>
+&nbsp;&nbsp;escapeHtml: <span class="val">false</span>
+});</pre>
+  </li>
+
 </ul>
 
 
@@ -262,6 +274,10 @@
 		<td><i>null</i></td>
 		<td>Auto close timer of the modal. Set in ms (milliseconds).</td>
 	</tr>
+  <tr>
+    <td><b>escapeHtml</b></td>
+    <td><i>true</i></td>
+    <td>Escape HTML in the modal body</td>
 </table>
 
 
@@ -353,6 +369,14 @@ document.querySelector('ul.examples li.custom-icon button').onclick = function()
 		text: "Here's a custom image.",
 		imageUrl: 'images/thumbs-up.jpg'
 	});
+};
+
+document.querySelector('ul.examples li.html-in-body').onclick = function(){
+  swal({
+    title: "Hello",
+    text: "<strong>I'm bold!</strong>",
+    escapeHtml: false
+  });
 };
 
 </script>
